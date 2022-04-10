@@ -46,7 +46,7 @@ class PortfolioController extends Controller
         $file=$request->file('file');
         if($file){
             // File::delete(public_path($portfolio->other));
-            $fname=$request->name.rand(1,10000).$file->getClientOriginalExtension();
+            $fname=$request->name.rand(1,10000).'.'.$file->getClientOriginalExtension();
             $portfolio->other='upload/port/'.$fname;
             $path=$file->move(public_path().'/upload/port/',$fname);
      
@@ -102,7 +102,7 @@ class PortfolioController extends Controller
         $file=$request->file('file');
         if($file){
             File::delete(public_path($portfolio->other));
-            $fname=$request->name.rand(1,10000).$file->getClientOriginalExtension();
+            $fname=$request->name.rand(1,10000).'.'.$file->getClientOriginalExtension();
             $portfolios->other='upload/port/'.$fname;
             $path=$file->move(public_path().'/upload/port/',$fname);
      
