@@ -34,7 +34,7 @@ use ResponseApi;
     }
 
 public function contact(Request $request){
-    dd($request->all());
+    dd($request->name);
     $contact=new Contact;
     $contact->name=$request->name;
     $contact->email=$request->email;
