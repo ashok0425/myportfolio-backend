@@ -34,6 +34,8 @@ use ResponseApi;
     }
 
 public function contact(Request $request){
+    return   $this->success($contact,'Your query has been placed.we will get back to you as soon as possible.',200);
+
     $contact=new Contact;
     $contact->name=$request->name;
     $contact->email=$request->email;
