@@ -23,6 +23,11 @@ use ResponseApi;
     }
 
 
+    public function singlePortfolio($id){
+        $portfolios=Portfolio::find($id);
+        return $this->success($portfolios,'Data Fetch',200);
+    }
+
     public function skill(){
         $skills=Skill::orderBy('id','desc')->get();
         return   $this->success($skills,'Data Fetch',200);

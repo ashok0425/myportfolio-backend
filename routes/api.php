@@ -20,6 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/info','InfoController@index');
 Route::get('/portfolio','InfoController@portfolio');
+Route::get('/portfolio/{id}','InfoController@singlePortfolio');
+
 Route::get('/skill','InfoController@skill');
 Route::post('/contact','InfoController@contact');
 
