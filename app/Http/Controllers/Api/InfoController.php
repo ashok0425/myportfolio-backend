@@ -7,7 +7,8 @@ use App\Models\Portfolio;
 use App\Models\Skill;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
+
 class InfoController extends Controller
 {
 use ResponseApi;
@@ -34,7 +35,6 @@ use ResponseApi;
     }
 
 public function contact(Request $request){
-    dd($request->name);
     $contact=new Contact;
     $contact->name=$request->name;
     $contact->email=$request->email;
