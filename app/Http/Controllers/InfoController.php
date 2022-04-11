@@ -47,7 +47,7 @@ class InfoController extends Controller
     $file=$request->file('cv');
     if($file){
         File::delete(public_path($info->cv));
-        $fname='ashokmehtaresume.'.rand().$file->getClientOriginalExtension();
+        $fname=rand().'ashokmehtaresume.'.$file->getClientOriginalExtension();
         $info->cv='upload/'.$fname;
         $path=$file->move(public_path().'/upload/',$fname);
  
@@ -57,7 +57,7 @@ class InfoController extends Controller
 
     if($file){
         File::delete(public_path($info->image));
-        $fname='ahokmehta.'.rand().$file->getClientOriginalExtension();
+        $fname=rand().'ashokmehta.'.$file->getClientOriginalExtension();
         $info->image='upload/'.$fname;
         $path=$file->move(public_path().'/upload/',$fname);
 
@@ -71,7 +71,7 @@ class InfoController extends Controller
 
     if($file){
         File::delete(public_path($info->mobile_image));
-        $fname='mobile_image.'.rand().$file->getClientOriginalExtension();
+        $fname=rand().'mobile_image.'.$file->getClientOriginalExtension();
         $info->mobile_image='upload/'.$fname;
         $path=$file->move(public_path().'/upload/',$fname);
 
