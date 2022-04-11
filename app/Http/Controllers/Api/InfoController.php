@@ -41,14 +41,11 @@ public function contact(Request $request){
     $contact->phone=$request->phone;
     $contact->subject=$request->subject;
     $contact->message=$request->message;
-
    if($contact->save()){
-        return   $this->success($contact,'Your query has been placed.we will get back to you as soon as possible.',200);
-         
+        return   $this->success($contact,'Your query has been placed.we will get back to you as soon as possible.',200);s
    }else{
     return   $this->error('Failed to placed query','Failed to placed query.Try again later.',400);
 
    }
-   
 }
 }

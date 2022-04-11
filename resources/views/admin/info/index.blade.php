@@ -149,6 +149,14 @@
 
                         </div>
 
+
+                        
+                        <div class="col-md-6 mt-2">
+                            <label >Designation</label>
+                            <input type="text" value="{{$info->designation}}" class="form-control" name="designation" required>
+
+                        </div>
+
                         <div class="col-md-6 mt-2">
                             <label >Image</label>
 
@@ -157,6 +165,19 @@
                           </div>
                           <a href="{{ asset($info->image) }}" download="ashokmehtacv">
                             <img src="{{ asset($info->image) }}" alt="" width="100">
+                          </a>
+                        </div>
+
+
+
+                        <div class="col-md-6 mt-2">
+                            <label >Mobile Image</label>
+
+                            <div class="file-upload-wrapper" data-text="Select your file!">
+                            <input name="mobile_image" type="file" class="file-upload-field" value="">
+                          </div>
+                          <a href="{{ asset($info->mobile_image) }}" download="ashokmehtacv">
+                            <img src="{{ asset($info->mobile_image) }}" alt="" width="100">
                           </a>
                         </div>
 

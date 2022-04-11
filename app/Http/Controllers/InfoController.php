@@ -41,11 +41,13 @@ class InfoController extends Controller
         $info->address=$request->address;
         $info->age=$request->age;
         $info->about=$request->about;
+        $info->designation=$request->designation;
+
 
     $file=$request->file('cv');
     if($file){
         File::delete(public_path($info->cv));
-        $fname='ashokmentresume.'.$file->getClientOriginalExtension();
+        $fname='ashokmehtaresume.'.$file->getClientOriginalExtension();
         $info->cv='upload/'.$fname;
         $path=$file->move(public_path().'/upload/',$fname);
  
@@ -55,8 +57,22 @@ class InfoController extends Controller
 
     if($file){
         File::delete(public_path($info->image));
-        $fname='ahoknehta.'.$file->getClientOriginalExtension();
+        $fname='ahokmehta.'.$file->getClientOriginalExtension();
         $info->image='upload/'.$fname;
+        $path=$file->move(public_path().'/upload/',$fname);
+
+    }
+
+
+
+
+
+    $file=$request->file('mobile_image');
+
+    if($file){
+        File::delete(public_path($info->image));
+        $fname='mobile_image.'.$file->getClientOriginalExtension();
+        $info->mobile_image='upload/'.$fname;
         $path=$file->move(public_path().'/upload/',$fname);
 
     }
