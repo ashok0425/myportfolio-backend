@@ -70,7 +70,7 @@ class InfoController extends Controller
     $file=$request->file('mobile_image');
 
     if($file){
-        File::delete(public_path($info->image));
+        File::delete(public_path($info->mobile_image));
         $fname='mobile_image.'.$file->getClientOriginalExtension();
         $info->mobile_image='upload/'.$fname;
         $path=$file->move(public_path().'/upload/',$fname);

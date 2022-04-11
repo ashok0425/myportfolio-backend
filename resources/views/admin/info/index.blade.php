@@ -176,7 +176,7 @@
                             <div class="file-upload-wrapper" data-text="Select your file!">
                             <input name="mobile_image" type="file" class="file-upload-field" value="">
                           </div>
-                          <a href="{{ asset($info->mobile_image) }}" download="ashokmehtacv">
+                          <a href="{{ asset($info->mobile_image) }}" download="mobile_image">
                             <img src="{{ asset($info->mobile_image) }}" alt="" width="100">
                           </a>
                         </div>
